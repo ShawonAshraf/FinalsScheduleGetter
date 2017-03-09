@@ -1,4 +1,5 @@
 # Getting your course wise schedule from the PDF published on NSU Website
+#### Was Feeling too lazy to search from a PDF file, so made this hack
 ###### Just run it!
 
 ### How it works?
@@ -14,17 +15,17 @@
 
 - [x] Clone the repo or download as a zip
 - [x] Get into the folder
-    `cd "Final Exam Schedule Getter" `
+    - `cd "Final Exam Schedule Getter" `
 - [x] Then run the following command in your command line to make sure you have the necessary modules ready(skip if you
     already know how to get modules from a requirements file)
 
-    `pip install -r requirements.txt`
-     (If you're using anaconda then instead of pip,
+    - `pip install -r requirements.txt`
+    - (If you're using anaconda then instead of pip,
      use [this shell script to do things](https://gist.github.com/ShawonAshraf/1ee95026b80838d3f51776a5bdfcd2d4))
 
-     **However** if you're on Windows, shell scripts are of no use. so run this to install the module directly
+    - **However** if you're on Windows, shell scripts are of no use. so run this to install the module directly
 
-     - `conda install -c conda-forge pypdf2=1.26.0`
+    - `conda install -c conda-forge pypdf2=1.26.0`
 
 - [x] Then navigate to sources folder
     `cd sources`
@@ -34,6 +35,6 @@
     params are : your courseId and section, separated by a space
 
     __Example :__
-    `python schedule_getter.py CSE327 3 CSE418 1 CSE323 2 PHY108 3`
+    - `python schedule_getter.py CSE327 3 CSE418 1 CSE323 2 PHY108 3`
 
     **Make sure courseID has no space in it, e.g. typing CSE 327 instead of CSE327 is an error here**
