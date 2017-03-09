@@ -22,6 +22,9 @@
      (If you're using anaconda then instead of pip,
      use [this shell script to do things](https://gist.github.com/ShawonAshraf/1ee95026b80838d3f51776a5bdfcd2d4))
 
+     **However** if you're on Windows, shell scripts are of no use. so run this to install the module directly
+     `conda install -c conda-forge pypdf2=1.26.0`
+
 - [x] Then navigate to sources folder
     `cd sources`
 
