@@ -204,5 +204,3 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/python,pycharm,osx,windows,visualstudiocode
 
-# outout file
-output/your_schedule.txt
