@@ -52,16 +52,15 @@ class ScheduleExtract:
 # main tasks here
 
 extractor = ScheduleExtract()
-scheduleList = []  # a list to hold your schedules!
 
 courseFromCmd = sys.argv
+outFile = open('../output/your_schedule.txt', 'w')
 
 for i in range(1, len(sys.argv), 2):
     sc = extractor.getSchedule(courseFromCmd[i], courseFromCmd[i + 1])
     print(sc)
 
-# writes the schedule to a file
+    # writes schedule to a file
+    outFile.writelines(str(sc))
 
-outFile = open('../output/your_schedule.txt', 'w')
-for s in scheduleList:
-    outFile.writeline(s)
+outFile.close()
