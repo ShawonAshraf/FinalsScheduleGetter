@@ -8,6 +8,7 @@
 - [x] Then a brute force algorithm that searches the entire file, all the text, one by one.
 - [x] Search params : courseID and section number. Apparently that's what you use to look for right?
 - [x] If your course is found, will return courseID, section, date, time and room number of exam
+- [x] Will write your schedule to to a text file as well!
 - [x] Since a brute force algorithm runs in, it's slow. It was a quick hack, so no optimization. (You can if you want,
     contributions are welcome!)
 
@@ -38,3 +39,5 @@
     - `python schedule_getter.py CSE327 3 CSE418 1 CSE323 2 PHY108 3`
 
     **Make sure courseID has no space in it, e.g. typing CSE 327 instead of CSE327 is an error here**
+
+- [x] After execution, your schedule file will be ready in the `output` folder.
