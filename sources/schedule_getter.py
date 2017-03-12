@@ -19,6 +19,7 @@ class Schedule:
                 )
 
 
+
 class ScheduleExtract:
     numPages = 36
 
@@ -52,15 +53,19 @@ class ScheduleExtract:
 # main tasks here
 
 extractor = ScheduleExtract()
-
 courseFromCmd = sys.argv
-outFile = open('../output/your_schedule.txt', 'w')
+
+scheduleAsList = []
 
 for i in range(1, len(sys.argv), 2):
     sc = extractor.getSchedule(courseFromCmd[i], courseFromCmd[i + 1])
     print(sc)
-
     # writes schedule to a file
-    outFile.writelines(str(sc))
+    scheduleAsList.append(str(sc))
 
-outFile.close()
+print('\n')
+writeToFile = input('Write schedule to file? [y/n]? ')
+if writeToFile == 'y':
+    outFile = open('../output/your_schedule.txt', 'w')
+    outFile.close()
+
