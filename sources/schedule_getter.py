@@ -40,7 +40,7 @@ class ScheduleExtract:
             dataFromPage = self.readPage(pageNo)
 
             for i in range(len(dataFromPage)):
-                if dataFromPage[i] == courseID and dataFromPage[i + 1] == section:
+                if courseID in dataFromPage[i] and dataFromPage[i + 1] == section:
                     schedule = Schedule(dataFromPage[i], dataFromPage[i + 1], dataFromPage[i + 2],
                                         dataFromPage[i + 3], dataFromPage[i + 4])
 
