@@ -10,7 +10,7 @@
 - [x] If your course is found, will return courseID, section, date, time and room number of exam
     
     ![alt text](http://imgur.com/TwBjM0R.png "Dum!")
-- [x] Will write your schedule to to a text file as well!
+- [x] Will write your schedule to to a text file as well.(will show a prompt, if you agree, it'll write to file!)
 - [x] Since a brute force algorithm runs in, it's slow. It was a quick hack, so no optimization. (You can if you want,
     contributions are welcome!)
 
@@ -23,8 +23,8 @@
     already know how to get modules from a requirements file)
 
     - `pip install -r requirements.txt`
-    - (If you're using anaconda then instead of pip,
-     use [this shell script to do things](https://gist.github.com/ShawonAshraf/1ee95026b80838d3f51776a5bdfcd2d4))
+    - If you want to use **conda** then instead of **pip**,
+     use [this shell script to do things](https://gist.github.com/ShawonAshraf/1ee95026b80838d3f51776a5bdfcd2d4)
 
     - **However** if you're on Windows, shell scripts are of no use. so run this to install the module directly
 
@@ -42,4 +42,4 @@
 
     **Make sure courseID has no space in it, e.g. typing CSE 327 instead of CSE327 is an error here**
 
-- [x] After execution, your schedule file will be ready in the `output` folder.
+- [x] After execution, your schedule file will be ready in the `output` folder, if you've answered the prompt to write.

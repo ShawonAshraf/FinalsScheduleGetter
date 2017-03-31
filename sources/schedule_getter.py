@@ -19,6 +19,7 @@ class Schedule:
         )
 
 
+
 class ScheduleExtract:
     numPages = 36
 
@@ -40,7 +41,7 @@ class ScheduleExtract:
             dataFromPage = self.readPage(pageNo)
 
             for i in range(len(dataFromPage)):
-                if dataFromPage[i] == courseID and dataFromPage[i + 1] == section:
+                if courseID in dataFromPage[i] and dataFromPage[i + 1] == section:
                     schedule = Schedule(dataFromPage[i], dataFromPage[i + 1], dataFromPage[i + 2],
                                         dataFromPage[i + 3], dataFromPage[i + 4])
 
@@ -52,15 +53,23 @@ class ScheduleExtract:
 # main tasks here
 
 extractor = ScheduleExtract()
-
 courseFromCmd = sys.argv
-outFile = open('../output/your_schedule.txt', 'w')
+
+scheduleAsList = []
 
 for i in range(1, len(sys.argv), 2):
     sc = extractor.getSchedule(courseFromCmd[i], courseFromCmd[i + 1])
     print(sc)
-
     # writes schedule to a file
-    outFile.writelines(str(sc))
+    scheduleAsList.append(str(sc))
 
-outFile.close()
+print('\n\n')
+writeToFile = input('Write schedule to file? [y/n]? ')
+if writeToFile == 'y':
+    outFile = open('../output/your_schedule.txt', 'w')
+
+    for schedule in scheduleAsList:
+        outFile.writelines(schedule)
+
+    outFile.close()
+
