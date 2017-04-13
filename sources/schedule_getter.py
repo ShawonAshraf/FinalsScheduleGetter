@@ -20,7 +20,7 @@ class Schedule:
 
 
 class ScheduleExtract:
-    numPages = 36
+    numPages = 54
 
     def readPage(self, pageNumber):
         pdfFile = open('../pdf/new_schedule.pdf', 'rb')
@@ -36,7 +36,7 @@ class ScheduleExtract:
         return data
 
     def getSchedule(self, courseID, section):
-        for pageNo in range(ScheduleExtract.numPages):
+        for pageNo in range(2, ScheduleExtract.numPages):
             dataFromPage = self.readPage(pageNo)
 
             for i in range(len(dataFromPage)):
