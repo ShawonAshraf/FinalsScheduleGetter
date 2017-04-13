@@ -64,7 +64,7 @@ for i in range(1, len(sys.argv), 2):
 
 print('\n\n')
 writeToFile = input('Write schedule to file? [y/n]? ')
-if writeToFile == 'y':
+if writeToFile == 'y' or writeToFile == 'Y':
     outFile = open('../output/your_schedule.txt', 'w')
 
     for schedule in scheduleAsList:
