@@ -16,8 +16,7 @@ class Schedule:
                 + self.date + "\t"
                 + self.time + "\t"
                 + self.room + "\n"
-        )
-
+                )
 
 
 class ScheduleExtract:
@@ -72,4 +71,3 @@ if writeToFile == 'y':
         outFile.writelines(schedule)
 
     outFile.close()
-
