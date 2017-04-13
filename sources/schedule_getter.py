@@ -23,7 +23,7 @@ class ScheduleExtract:
     numPages = 36
 
     def readPage(self, pageNumber):
-        pdfFile = open('../pdf/old_schedule.pdf', 'rb')
+        pdfFile = open('../pdf/new_schedule.pdf', 'rb')
         reader = PyPDF2.PdfFileReader(pdfFile)
 
         pageObj = reader.getPage(pageNumber)
