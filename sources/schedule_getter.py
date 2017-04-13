@@ -16,7 +16,7 @@ class Schedule:
                 + self.date + "\t"
                 + self.time + "\t"
                 + self.room + "\n"
-                )
+        )
 
 
 
