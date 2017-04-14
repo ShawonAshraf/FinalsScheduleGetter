@@ -36,7 +36,7 @@ class ScheduleExtract:
         return data
 
     def getSchedule(self, courseID, section):
-        for pageNo in range(2, ScheduleExtract.numPages):
+        for pageNo in range(1, ScheduleExtract.numPages):
             dataFromPage = self.readPage(pageNo)
 
             for i in range(len(dataFromPage)):
