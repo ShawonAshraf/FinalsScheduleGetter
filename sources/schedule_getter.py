@@ -36,15 +36,24 @@ class ScheduleExtract:
         return data
 
     def getSchedule(self, courseID, section):
-        for pageNo in range(2, ScheduleExtract.numPages):
+        for pageNo in range(ScheduleExtract.numPages):
             dataFromPage = self.readPage(pageNo)
 
             for i in range(len(dataFromPage)):
-                if courseID in dataFromPage[i] and dataFromPage[i + 1] == section:
+
+                if pageNo == 1:
+                    if courseID in dataFromPage[i] and dataFromPage[i + 1][0] == section:
+                        schedule = Schedule(dataFromPage[i][1:len(dataFromPage[i])], dataFromPage[i + 1][0], dataFromPage[i + 1][1:len(dataFromPage[i + 1])],
+                                            dataFromPage[i + 2], dataFromPage[i + 3])
+
+                        return schedule
+
+                elif pageNo != 1 and courseID in dataFromPage[i] and dataFromPage[i + 1] == section:
                     schedule = Schedule(dataFromPage[i], dataFromPage[i + 1], dataFromPage[i + 2],
                                         dataFromPage[i + 3], dataFromPage[i + 4])
 
                     return schedule
+
                 else:
                     continue
 
